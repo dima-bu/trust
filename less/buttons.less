@@ -1,0 +1,81 @@
+@import "variables.less";
+
+.ti-button {
+  display: inline-block;
+  border-radius: 2px;
+  font-family: @font-main;
+  font-weight: 700;
+  border: 0 none;
+  outline: 0 none;
+  cursor: pointer;
+
+  &.-md-size {
+    font-size: 14px;
+    line-height: 1.2;
+    padding: 9px 50px;
+  }
+
+  &.-lg-size {
+    font-size: 18px;
+    line-height: 1.2;
+    padding: 9px 27px 10px 27px;
+  }
+
+  &.-normal {
+    background-color: @blue-main;
+    color: #ffffff;
+    &:hover {
+      background-color: lighten(@blue-main, 3%);
+    }
+    &:active {
+      background-color: darken(@blue-main, 3%);
+    }
+  }
+
+  &.-submit {
+    background-color: @green-main;
+    color: #ffffff;
+    &:hover {
+      background-color: lighten(@green-main, 3%);
+    }
+    &:active {
+      background-color: darken(@green-main, 3%);
+    }
+  }
+
+}
+
+@add-photo-transition: all 0.3s ease-out 0s;
+
+.add-photo {
+  width: 44px;
+  height: 34px;
+  opacity: 0.5;
+  border-radius: 2px;
+  background-color: @grey-main;
+  text-align: center;
+  display: block;
+  padding: 7px 0;
+  transition: @add-photo-transition;
+
+  &:hover {
+    opacity: 1;
+    .add-photo_icon {
+      fill: rgb(255,255,255)
+    }
+  }
+
+  &:active {
+    opacity: 1;
+    .add-photo_icon {
+      fill: rgba(255,255,255, 0.5)
+    }
+  }
+
+}
+
+.add-photo_icon {
+  display: inline-block;
+  fill: rgba(255,255,255, 0.6);
+  transition: @add-photo-transition;
+}

@@ -1,0 +1,95 @@
+@import "variables.less";
+
+
+@font-face {
+  font-family: 'helveticabold';
+  src: url('../fonts/helveticaneuecyr-bold-webfont.woff2') format('woff2'),
+  url('../fonts/helveticaneuecyr-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: @blue-main;
+
+  &:hover {
+    color: lighten(@blue-main, 5%);
+  }
+
+  &:active {
+    color: darken(@blue-main, 3%);
+  }
+}
+
+h1, .h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+h2, .h2 {
+  font-weight: 700;
+  font-size: 24px;
+  opacity: 0.6;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  margin-top: 0;
+
+  &.-normal {
+    opacity: 1;
+  }
+
+}
+
+h5, .h5 {
+  font-family: 'helveticabold';
+  font-size: 10px;
+  font-weight: 700;
+  color: @grey-light;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 28px;
+  margin: 0 0 10px 0;
+}
+
+p.lg {
+  font-size: 20px;
+  line-height: 1.8;
+  margin: 15px 0;
+}
+
+.paragraph-quote {
+  position: relative;
+
+  p {
+    z-index: 1;
+    position: relative;
+  }
+  .quote-up {
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+  .quote-bottom {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+  }
+}
+
+.link-md {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.13;
+
+  &.-block {
+    display: block;
+  }
+}
